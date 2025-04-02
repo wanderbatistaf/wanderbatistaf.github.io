@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderson de Freitas Batista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function showModal(title, message) {
+        const modal = document.createElement("div");
+        modal.className = "fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50";
+        modal.innerHTML = `
+          <div class='bg-white p-6 rounded shadow max-w-md text-left'>
+            <h2 class='text-xl font-bold mb-2'>${title}</h2>
+            <p class='mb-4'>${message}</p>
+            <button onclick="this.closest('div').parentElement.remove()" class='bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700'>Fechar</button>
+          </div>
+        `;
+        document.body.appendChild(modal);
+      }
+    </script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header / Hero Section -->
+    <header class="h-screen flex flex-col justify-center items-center text-center p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <img
+          src="https://avatars.githubusercontent.com/u/98125036?v=4"
+          alt="Wanderson de Freitas Batista"
+          class="rounded-full w-48 h-48 shadow-lg border-4 border-white"
+        />
+        <div class="max-w-xl">
+          <h1 class="text-4xl font-bold mb-2">Olá, eu sou <span class="text-yellow-300">Wanderson</span></h1>
+          <p class="text-lg mb-4">Functional Analyst | Eng. Sistemas & Desenvolvimento | Python | Flutter | Azure | SQL | Firebase | WebApps</p>
+          <div class="flex justify-center gap-4 mb-4">
+            <a href="https://www.linkedin.com/in/wanderfreitasb/" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/3488/3488334.png" alt="LinkedIn" class="w-10 h-10 transition-transform transform hover:scale-110 hover:opacity-80" />
+            </a>
+            <a href="https://instagram.com/wanderfreitasb" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/739/739193.png" alt="Instagram" class="w-10 h-10 transition-transform transform hover:scale-110 hover:opacity-80" />
+            </a>
+            <a href="https://github.com/wanderbatistaf" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/3488/3488425.png" alt="GitHub" class="w-10 h-10 transition-transform transform hover:scale-110 hover:opacity-80" />
+            </a>
+          </div>
+          <a href="mailto:wanderfreitasb@gmail.com" class="bg-white text-purple-600 px-6 py-2 rounded-full hover:bg-purple-100 transition font-semibold">
+            Vamos conversar
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sobre mim -->
+    <section class="py-16 text-center bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Sobre mim</h2>
+        <p class="text-lg text-gray-700">Sou um Analista Funcional apaixonado por desenvolvimento de sistemas, com sólida experiência em soluções backend, APIs, automações e integração de sistemas. Com atuação na indústria, especialmente no setor de papel e celulose, me destaco na análise e construção de ferramentas que impulsionam produtividade e conectividade. Tenho forte atuação com Python, SQL, Flutter, Firebase e Microsoft Azure, e venho colaborando com iniciativas de digitalização e transformação de processos.</p>
+      </div>
+    </section>
+
+    <!-- Tecnologias e Linguagens -->
+    <section class="py-12 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-xl font-semibold mb-4">Tecnologias e Linguagens</h2>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="showModal('HTML5', 'Linguagem de marcação para criação de páginas web estruturadas.')" class="bg-red-600 px-3 py-1 rounded text-sm font-semibold">HTML5</button>
+          <button onclick="showModal('JavaScript', 'Linguagem de programação para interatividade e lógica no lado do cliente.')" class="bg-yellow-400 text-black px-3 py-1 rounded text-sm font-semibold">JavaScript</button>
+          <button onclick="showModal('Java', 'Linguagem orientada a objetos amplamente usada em aplicações corporativas.')" class="bg-blue-700 px-3 py-1 rounded text-sm font-semibold">JAVA</button>
+          <button onclick="showModal('Angular', 'Framework front-end baseado em TypeScript para construção de SPAs.')" class="bg-red-500 px-3 py-1 rounded text-sm font-semibold">ANGULAR</button>
+          <button onclick="showModal('TypeScript', 'Superset do JavaScript que adiciona tipagem estática.')" class="bg-blue-500 px-3 py-1 rounded text-sm font-semibold">TYPESCRIPT</button>
+          <button onclick="showModal('Python', 'Linguagem versátil usada em automação, ciência de dados e back-end.')" class="bg-slate-600 px-3 py-1 rounded text-sm font-semibold">PYTHON</button>
+          <button onclick="showModal('Flutter', 'Framework do Google para construção de apps mobile nativos com Dart.')" class="bg-blue-600 px-3 py-1 rounded text-sm font-semibold">FLUTTER</button>
+          <button onclick="showModal('Dart', 'Linguagem usada com Flutter para construção de interfaces.')" class="bg-blue-400 px-3 py-1 rounded text-sm font-semibold">DART</button>
+          <button onclick="showModal('Informix', 'SGBD robusto usado principalmente em ambientes industriais.')" class="bg-gray-700 px-3 py-1 rounded text-sm font-semibold">INFORMIX</button>
+          <button onclick="showModal('SQL', 'Linguagem padrão para consultas e manipulação de dados em bancos relacionais.')" class="bg-green-600 px-3 py-1 rounded text-sm font-semibold">SQL</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="py-16 bg-gray-50 text-center">
+      <h2 class="text-3xl font-bold mb-10">O que eu faço</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-4 max-w-6xl mx-auto">
+        <div>
+          <div class="text-purple-500 text-5xl mb-4">💻</div>
+          <h3 class="font-semibold text-xl mb-2">Desenvolvimento Web</h3>
+          <p>Criação de soluções robustas com APIs, frontends interativos, integrações e lógica backend completa.</p>
+        </div>
+        <div>
+          <div class="text-yellow-400 text-5xl mb-4">📱</div>
+          <h3 class="font-semibold text-xl mb-2">Aplicações Mobile</h3>
+          <p>Apps multiplataforma com Flutter, integrados a Firebase, notificações, autenticação e banco de dados.</p>
+        </div>
+        <div>
+          <div class="text-blue-400 text-5xl mb-4">🧠</div>
+          <h3 class="font-semibold text-xl mb-2">Análise & Automação</h3>
+          <p>RPA, extração de dados, automações em Python com cron jobs e dashboards orientados a resultado.</p>
+        </div>
+      </div>
+    </section>
+	
+	    <!-- Projetos em andamento -->
+    <section class="py-16 bg-white text-center">
+      <h2 class="text-3xl font-bold mb-10">Projetos em Andamento</h2>
+      <div class="max-w-md mx-auto bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
+  <h3 class="font-semibold text-xl mb-2">BeeWork</h3>
+  <p class="text-sm text-gray-600 mb-4">Aplicativo de serviços integrado com dashboard, dual-mode (Consumer & Provider) e login Firebase.</p>
+
+  <!-- Barra de progresso -->
+  <div class="w-full bg-gray-300 rounded-full h-4">
+    <div class="bg-purple-600 h-4 rounded-full" style="width: 89%;"></div>
+  </div>
+  <p class="text-sm mt-2 text-gray-700">89% concluído</p>
+
+  <!-- Linguagens (escondido até clicar) -->
+  <div class="mt-4 hidden languages">
+    <h4 class="font-semibold mb-1 text-sm">Languages</h4>
+    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+      <div class="bg-teal-500 h-2" style="width: 99.3%"></div>
+      <div class="bg-yellow-400 h-2" style="width: 0.2%"></div>
+      <div class="bg-indigo-400 h-2" style="width: 0.2%"></div>
+      <div class="bg-pink-500 h-2" style="width: 0.1%"></div>
+      <div class="bg-red-400 h-2" style="width: 0.1%"></div>
+      <div class="bg-orange-400 h-2" style="width: 0.1%"></div>
+    </div>
+    <ul class="text-xs mt-2 text-left space-y-1">
+      <li><span class="inline-block w-3 h-3 rounded-full bg-teal-500 mr-2"></span><strong>Dart</strong> 99.3%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span><strong>Java</strong> 0.2%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-indigo-400 mr-2"></span><strong>Objective-C</strong> 0.2%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-pink-500 mr-2"></span><strong>Swift</strong> 0.1%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-red-400 mr-2"></span><strong>Ruby</strong> 0.1%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-orange-400 mr-2"></span><strong>HTML</strong> 0.1%</li>
+    </ul>
+  </div>
+</div>
+
+    </section>
+
+    <!-- Projetos -->
+    <section class="py-16 text-center">
+      <h2 class="text-3xl font-bold mb-10">Projetos</h2> 
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
+  <h3 class="font-bold text-xl mb-2">GastroLink</h3>
+  <p class="text-sm text-gray-600">Sistema de pedidos online para restaurantes, com subdomínios, Firebase, painel administrativo e notificações.</p>
+  <div class="mt-4 hidden languages">
+    <h4 class="font-semibold mb-1 text-sm">Languages</h4>
+    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+      <div class="h-2 bg-yellow-400" style="width: 100%"></div>
+    </div>
+    <ul class="text-xs mt-2 text-left">
+      <li><span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>JavaScript 100%</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function toggleLanguages(card) {
+    const langSection = card.querySelector(".languages");
+    langSection.classList.toggle("hidden");
+  }
+</script>
+
+<div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
+  <h3 class="font-bold text-xl mb-2">infinitStories</h3>
+  <p class="text-sm text-gray-600">Plataforma de livros e poemas autogeráveis com IA.</p>
+
+  <div class="mt-4 hidden languages">
+    <h4 class="font-semibold mb-1 text-sm">Languages</h4>
+    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+      <div class="bg-yellow-400 h-2" style="width: 55.7%"></div>
+      <div class="bg-blue-400 h-2" style="width: 19.6%"></div>
+      <div class="bg-purple-500 h-2" style="width: 12.1%"></div>
+      <div class="bg-pink-500 h-2" style="width: 6.6%"></div>
+      <div class="bg-orange-500 h-2" style="width: 5.3%"></div>
+      <div class="bg-indigo-400 h-2" style="width: 0.7%"></div>
+    </div>
+    <ul class="text-xs mt-2 text-left space-y-1">
+      <li><span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>JavaScript 55.7%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-blue-400 mr-2"></span>TypeScript 19.6%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-purple-500 mr-2"></span>CSS 12.1%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-pink-500 mr-2"></span>SCSS 6.6%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-orange-500 mr-2"></span>HTML 5.3%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-indigo-400 mr-2"></span>PHP 0.7%</li>
+    </ul>
+  </div>
+</div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
+  <h3 class="font-bold text-xl mb-2">WBJDBC</h3>
+  <p class="text-sm text-gray-600">Library to simplify JDBC and JVM configuration for Informix and MongoDB</p>
+
+  <div class="mt-4 hidden languages">
+    <h4 class="font-semibold mb-1 text-sm">Languages</h4>
+    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+      <div class="bg-blue-600 h-2" style="width: 100%"></div>
+    </div>
+    <ul class="text-xs mt-2 text-left space-y-1">
+      <li><span class="inline-block w-3 h-3 rounded-full bg-blue-600 mr-2"></span><strong>Python</strong> 100.0%</li>
+    </ul>
+  </div>
+</div>
+
+<div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
+  <h3 class="font-bold text-xl mb-2">TibetOnline</h3>
+  <p class="text-sm text-gray-600">App Flutter de loja online. (iOS e Android)</p>
+
+  <div class="mt-4 hidden languages">
+    <h4 class="font-semibold mb-1 text-sm">Languages</h4>
+    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+      <div class="bg-teal-500 h-2" style="width: 85.1%"></div>
+      <div class="bg-cyan-400 h-2" style="width: 13.2%"></div>
+      <div class="bg-orange-500 h-2" style="width: 0.9%"></div>
+      <div class="bg-red-500 h-2" style="width: 0.3%"></div>
+      <div class="bg-pink-500 h-2" style="width: 0.2%"></div>
+      <div class="bg-yellow-400 h-2" style="width: 0.2%"></div>
+      <div class="bg-gray-400 h-2" style="width: 0.1%"></div>
+    </div>
+    <ul class="text-xs mt-2 text-left space-y-1">
+      <li><span class="inline-block w-3 h-3 rounded-full bg-teal-500 mr-2"></span><strong>Dart</strong> 85.1%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-cyan-400 mr-2"></span><strong>TypeScript</strong> 13.2%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-orange-500 mr-2"></span><strong>Objective-C</strong> 0.9%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-red-500 mr-2"></span><strong>Ruby</strong> 0.3%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-pink-500 mr-2"></span><strong>HTML</strong> 0.2%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span><strong>Swift</strong> 0.2%</li>
+      <li><span class="inline-block w-3 h-3 rounded-full bg-gray-400 mr-2"></span><strong>Other</strong> 0.1%</li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+    </section>
+	
+	
+    <!-- Experiência Profissional -->
+<!-- Experiência Profissional com logos entre header e corpo -->
+    <section class="py-16 bg-gray-50 text-center">
+      <h2 class="text-3xl font-bold mb-10">Experiência Profissional</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+        <div class="rounded-lg shadow-md overflow-hidden">
+          <div class="bg-[#d07857] h-20 relative">
+            <div class="absolute inset-x-0 top-4 flex justify-center">
+              <div class="bg-white rounded-full shadow-md w-[100px] h-[100px] overflow-hidden">
+                <img src="https://cotecportugal.pt/wp-content/uploads/2020/02/navigator.jpg" alt="The Navigator Company" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 pt-12">
+            <h3 class="font-bold text-lg">The Navigator Company</h3>
+            <p class="text-sm text-gray-600 mb-2">Functional Analyst - 2024 até o momento</p>
+            <p class="text-sm text-gray-700">Atuação em projetos de integração entre sistemas (PPMS, SAP, Digital Twin), automações Python e análise de processos industriais.</p>
+          </div>
+        </div>
+
+        <div class="rounded-lg shadow-md overflow-hidden">
+          <div class="bg-[#003057] h-20 relative">
+            <div class="absolute inset-x-0 top-4 flex justify-center">
+              <div class="bg-white rounded-full shadow-md w-[100px] h-[100px] overflow-hidden">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="RTM Sistemas" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 pt-12">
+            <h3 class="font-bold text-lg">Freelancer</h3>
+            <p class="text-sm text-gray-600 mb-2">Desenvolvedor Fullstack - 2024 a 2024</p>
+            <p class="text-sm text-gray-700">Criação de sistemas web e mobile com Flutter, Firebase, API RESTful, e-commerce e dashboards administrativos.</p>
+          </div>
+        </div>
+
+        <div class="rounded-lg shadow-md overflow-hidden">
+          <div class="bg-[#08ca6e] h-20 relative">
+            <div class="absolute inset-x-0 top-4 flex justify-center">
+              <div class="bg-white rounded-full shadow-md w-[100px] h-[100px] overflow-hidden">
+                <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/072017/picpay.jpg?itok=FOdpOUg-" alt="Freelancer" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 pt-12">
+            <h3 class="font-bold text-lg">PicPay</h3>
+            <p class="text-sm text-gray-600 mb-2">Data Analyst - 2021 a 2024</p>
+            <p class="text-sm text-gray-700">    Especialista em dados e negócios, com foco em análises, utilizando SQL/PySpark para geração de insights estratégicos para a diretoria, otimizando processos e automações.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificações / Selos -->
+    <section class="py-16 bg-gray-50 text-center">
+      <h2 class="text-3xl font-bold mb-10">Selos e Certificações</h2>
+      <div class="overflow-x-auto whitespace-nowrap px-4">
+        <div class="inline-flex gap-4">
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/H7NRHER8?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/describe-benefits-use-cloud-services.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/8ZFM7NVW?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/1-explore-azure-functions.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/A42DQ667?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-deployment-slots.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2X2XH?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-scale-apps.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2XR8H?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-configure.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+          
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/UR8ZWJJ3?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/explore-provision-deploy-relational-database-offerings-azure.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/QS4TKKBE?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/explore-roles-responsibilities-world-of-data.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+
+          <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2XKBH?sharingId=97D59FA84B95E140" target="_blank">
+            <img src="https://learn.microsoft.com/en-us/training/achievements/azure-app-service-create-web-apps.svg" class="w-16 h-16" alt="Selo Microsoft" />
+          </a>
+
+          <a href="https://credentials.databricks.com/2c321a11-52b0-48cc-ab5e-296d1657dfa4#acc.gRIAf4J2" target="_blank">
+        <img src="https://templates.images.credential.net/1706553228549411657404043064415.png" class="w-16 h-16 object-contain mt-1 align-bottom" alt="Databricks" />
+          </a>
+          
+          <a href="https://credentials.databricks.com/2c321a11-52b0-48cc-ab5e-296d1657dfa4#acc.gRIAf4J2" target="_blank">
+<img src="https://play-lh.googleusercontent.com/CLRfGI3p-MYPan8aAfuVGdAIEADBywkLdfg2Le-_EPqpnbKHuEY8Gv7c8F9YG76bCT7N=w600-h300-pc0xffffff-pd"
+     class="w-20 min-h-[4rem] object-contain flex items-center justify-cente" alt="UVV" />
+     </a>
+          
+          <a href="https://credentials.databricks.com/2c321a11-52b0-48cc-ab5e-296d1657dfa4#acc.gRIAf4J2" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/LOGO_UNASP_-_AZUL_ISOLADO.png"
+     class="w-20 min-h-[4rem] object-contain flex items-center justify-cente" alt="UNASP" />
+     </a>
+          
+          <a href="https://credentials.databricks.com/2c321a11-52b0-48cc-ab5e-296d1657dfa4#acc.gRIAf4J2" target="_blank">
+<img src="https://hosting.renderforestsites.com/21347132/1025464/media/323ca3b2cebb5a3bd6ed13d4ca360029.png"
+     class="w-20 min-h-[4rem] object-contain flex items-center justify-center" alt="UniSantAnna" />
+     </a>
+      </div>
+    </section>
+    
+        <!-- Posts do Dev.to -->
+    <section class="py-16 bg-white text-center">
+      <h2 class="text-3xl font-bold mb-10">Artigos no Dev.to</h2>
+      <div id="devto-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+        <!-- Conteúdo dinâmico -->
+      </div>
+    </section>
+
+    <script>
+      async function fetchDevToPosts() {
+        try {
+          const res = await fetch("https://dev.to/api/articles?username=wanderbatistaf");
+          const data = await res.json();
+          const container = document.getElementById("devto-posts");
+          data.slice(0, 3).forEach(post => {
+            const el = document.createElement("div");
+            el.className = "bg-gray-50 p-6 rounded-lg shadow text-left";
+            el.innerHTML = `
+              <h3 class="font-semibold text-xl mb-2">${post.title}</h3>
+              <p class="text-sm text-gray-600 mb-4">${post.description}</p>
+              <a href="${post.url}" target="_blank" class="text-purple-600 font-semibold hover:underline">Ler artigo →</a>
+            `;
+            container.appendChild(el);
+          });
+        } catch (e) {
+          console.error("Erro ao carregar posts do Dev.to", e);
+        }
+      }
+
+      fetchDevToPosts();
+    </script>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-sm text-gray-500">
+      Feito por Wanderson de Freitas Batista · <a class="underline" href="https://www.linkedin.com/in/wanderfreitasb/">LinkedIn</a>
+    </footer>
+  </body>
+</html>
