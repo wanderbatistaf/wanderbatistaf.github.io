@@ -118,9 +118,9 @@
 
       <!-- Barra de progresso -->
       <div class="w-full bg-gray-300 rounded-full h-4">
-        <div class="bg-purple-600 h-4 rounded-full" style="width: 89%;"></div>
+        <div class="bg-purple-600 h-4 rounded-full" style="width: 93%;"></div>
       </div>
-      <p class="text-sm mt-2 text-gray-700">89% concluído</p>
+      <p class="text-sm mt-2 text-gray-700">93% concluído</p>
 
       <!-- Linguagens (escondido até clicar) -->
       <div class="mt-4 hidden languages">
@@ -150,6 +150,20 @@
   <section class="py-16 text-center">
     <h2 class="text-3xl font-bold mb-10">Projetos</h2>
     <div id="projetos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto">
+
+    <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)" data-repo="wanderbatistaf/amundsen-informix-ingest">
+      <h3 class="font-bold text-xl mb-2">Amundsen Informix Ingest</h3>
+      <p class="text-sm text-gray-600">Pipeline de Ingestão de Metadados do Informix no Amundsen usando wbjdbc e databuilder.</p>
+      <div class="mt-4 hidden languages">
+        <h4 class="font-semibold mb-1 text-sm">Languages</h4>
+        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+          <div class="bg-blue-600 h-2" style="width: 100%"></div>
+        </div>
+        <ul class="text-xs mt-2 text-left space-y-1">
+          <li><span class="inline-block w-3 h-3 rounded-full bg-blue-600 mr-2"></span><strong>Python</strong> 100.0%</li>
+        </ul>
+      </div>
+    </div>
 
       <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)" data-repo="wanderbatistaf/wborm">
         <h3 class="font-bold text-xl mb-2">WBORM</h3>
