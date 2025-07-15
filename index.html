@@ -118,9 +118,9 @@
 
       <!-- Barra de progresso -->
       <div class="w-full bg-gray-300 rounded-full h-4">
-        <div class="bg-purple-600 h-4 rounded-full" style="width: 93%;"></div>
+        <div class="bg-purple-600 h-4 rounded-full" style="width: 95%;"></div>
       </div>
-      <p class="text-sm mt-2 text-gray-700">93% concluído</p>
+      <p class="text-sm mt-2 text-gray-700">95% concluído</p>
 
       <!-- Linguagens (escondido até clicar) -->
       <div class="mt-4 hidden languages">
@@ -322,66 +322,258 @@
     </div>
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  // 1. Embaralhar os itens do carrossel
+  const track = document.getElementById('carouselTrack');
+  const itemsArray = Array.from(track.children);
+
+  // Função de embaralhamento Fisher-Yates
+  function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+  }
+
+  // Embaralha e reanexa os itens ao track
+  shuffle(itemsArray).forEach(item => track.appendChild(item));
+
+  // 2. O resto do seu código permanece igual
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const indicators = document.getElementById('indicators');
+  
+  const items = track.children;
+  const itemWidth = 88; // 64px (w-16) + 24px (gap-6)
+  const visibleItems = Math.floor(carousel.offsetWidth / itemWidth);
+  const maxScroll = Math.max(0, items.length - visibleItems);
+  
+  let currentIndex = 0;
+  
+  // Criar indicadores
+  for (let i = 0; i <= maxScroll; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'w-2 h-2 rounded-full transition-colors';
+      dot.addEventListener('click', () => goToSlide(i));
+      indicators.appendChild(dot);
+  }
+  
+  function updateCarousel() {
+      const translateX = -currentIndex * itemWidth;
+      track.style.transform = `translateX(${translateX}px)`;
+      
+      // Atualizar botões
+      prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+      nextBtn.style.opacity = currentIndex >= maxScroll ? '0.5' : '1';
+      
+      // Atualizar indicadores
+      Array.from(indicators.children).forEach((dot, index) => {
+          dot.className = index === currentIndex 
+              ? 'w-2 h-2 rounded-full bg-blue-600 transition-colors'
+              : 'w-2 h-2 rounded-full bg-gray-300 transition-colors';
+      });
+  }
+  
+  function goToSlide(index) {
+      currentIndex = Math.max(0, Math.min(index, maxScroll));
+      updateCarousel();
+  }
+  
+  prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          goToSlide(currentIndex - 1);
+      }
+  });
+  
+  nextBtn.addEventListener('click', () => {
+      if (currentIndex < maxScroll) {
+          goToSlide(currentIndex + 1);
+      }
+  });
+  
+  // Auto-play (opcional)
+  let autoPlay = setInterval(() => {
+      if (currentIndex >= maxScroll) {
+          goToSlide(0);
+      } else {
+          goToSlide(currentIndex + 1);
+      }
+  }, 4000);
+  
+  // Pausar auto-play ao hover
+  carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
+  carousel.addEventListener('mouseleave', () => {
+      autoPlay = setInterval(() => {
+          if (currentIndex >= maxScroll) {
+              goToSlide(0);
+          } else {
+              goToSlide(currentIndex + 1);
+          }
+      }, 4000);
+  });
+  
+  // Inicializar
+  updateCarousel();
+  
+  // Responsividade
+  window.addEventListener('resize', () => {
+      const newVisibleItems = Math.floor(carousel.offsetWidth / itemWidth);
+      const newMaxScroll = Math.max(0, items.length - newVisibleItems);
+      if (currentIndex > newMaxScroll) {
+          goToSlide(newMaxScroll);
+      }
+  });
+});
+  </script>
+
   <!-- Certificações / Selos -->
   <section class="py-16 bg-gray-50 text-center">
     <h2 class="text-3xl font-bold mb-10">Selos e Certificações</h2>
-    <div class="overflow-x-auto whitespace-nowrap px-4">
-      <div class="inline-flex gap-4">
+    
+    <!-- Container do carrossel -->
+    <div class="relative max-w-6xl mx-auto px-4">
+        <!-- Botão anterior -->
+        <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        
+        <!-- Container scrollável -->
+        <div id="carousel" class="overflow-hidden mx-8">
+            <div id="carouselTrack" class="flex gap-6 transition-transform duration-300 ease-in-out">
+                
+                <div class="flex-shrink-0">
+                    <a href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=acc68c5ef2ad3201f82cc37365040af4&action=view" target="_blank">
+                        <img src="https://i.imgur.com/tkp1VU0.png" class="w-14 h-14 hover:scale-110 transition-transform" alt="Engenharia de Software" />
+                    </a>
+                </div>
 
-        <a href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=acc68c5ef2ad3201f82cc37365040af4&action=view" target="_blank">
-          <img src="https://i.imgur.com/tkp1VU0.png" class="w-16 h-16" alt="Engenharia de Software" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/H7NRHER8?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/describe-benefits-use-cloud-services.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/H7NRHER8?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/describe-benefits-use-cloud-services.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/8ZFM7NVW?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/1-explore-azure-functions.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/8ZFM7NVW?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/1-explore-azure-functions.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/A42DQ667?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-deployment-slots.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/A42DQ667?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-deployment-slots.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2X2XH?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-scale-apps.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2X2XH?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-scale-apps.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2XR8H?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-configure.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2XR8H?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/app-service-configure.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/UR8ZWJJ3?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/explore-provision-deploy-relational-database-offerings-azure.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/UR8ZWJJ3?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/explore-provision-deploy-relational-database-offerings-azure.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/QS4TKKBE?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/explore-roles-responsibilities-world-of-data.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/QS4TKKBE?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/explore-roles-responsibilities-world-of-data.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2XKBH?sharingId=97D59FA84B95E140" target="_blank">
+                        <img src="https://learn.microsoft.com/en-us/training/achievements/azure-app-service-create-web-apps.svg" class="w-16 h-16 hover:scale-110 transition-transform" alt="Selo Microsoft" />
+                    </a>
+                </div>
 
-        <a href="https://learn.microsoft.com/api/achievements/share/pt-br/WandersonFreitasBatista-2912/3AW2XKBH?sharingId=97D59FA84B95E140" target="_blank">
-          <img src="https://learn.microsoft.com/en-us/training/achievements/azure-app-service-create-web-apps.svg" class="w-16 h-16" alt="Selo Microsoft" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://credentials.databricks.com/2c321a11-52b0-48cc-ab5e-296d1657dfa4#acc.gRIAf4J2" target="_blank">
+                        <img src="https://templates.images.credential.net/1706553228549411657404043064415.png" class="w-16 h-16 object-contain hover:scale-110 transition-transform" alt="Databricks" />
+                    </a>
+                </div>
 
-        <a href="https://credentials.databricks.com/2c321a11-52b0-48cc-ab5e-296d1657dfa4#acc.gRIAf4J2" target="_blank">
-          <img src="https://templates.images.credential.net/1706553228549411657404043064415.png" class="w-16 h-16 object-contain mt-1 align-bottom" alt="Databricks" />
-        </a>
+                <div class="flex-shrink-0">
+                  <a href="#" target="_blank">
+                      <img src="assets/cert_aws.png" class="w-18 h-14 object-contain hover:scale-110 transition-transform" alt="AWS" />
+                  </a>
+                </div>
 
-        <a href="https://uvv.br/" target="_blank">
-          <img src="https://play-lh.googleusercontent.com/CLRfGI3p-MYPan8aAfuVGdAIEADBywkLdfg2Le-_EPqpnbKHuEY8Gv7c8F9YG76bCT7N=w600-h300-pc0xffffff-pd" class="w-20 min-h-[4rem] object-contain flex items-center justify-cente" alt="UVV" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://uvv.br/" target="_blank">
+                        <img src="https://play-lh.googleusercontent.com/CLRfGI3p-MYPan8aAfuVGdAIEADBywkLdfg2Le-_EPqpnbKHuEY8Gv7c8F9YG76bCT7N=w600-h300-pc0xffffff-pd" class="w-20 h-16 object-contain hover:scale-110 transition-transform" alt="UVV" />
+                    </a>
+                </div>
 
-        <a href="https://media.licdn.com/dms/image/v2/D4D2DAQFLywqW-db4Jw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1722244064166?e=1744218000&v=beta&t=FB8Qcxt0sEpHzb1UI79Bv_2i3AgHeCT_cUY0kk29UDM" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/LOGO_UNASP_-_AZUL_ISOLADO.png" class="w-20 min-h-[4rem] object-contain flex items-center justify-cente" alt="UNASP" />
-        </a>
+                <div class="flex-shrink-0">
+                    <a href="https://media.licdn.com/dms/image/v2/D4D2DAQFLywqW-db4Jw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1722244064166?e=1744218000&v=beta&t=FB8Qcxt0sEpHzb1UI79Bv_2i3AgHeCT_cUY0kk29UDM" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/LOGO_UNASP_-_AZUL_ISOLADO.png" class="w-20 h-16 object-contain hover:scale-110 transition-transform" alt="UNASP" />
+                    </a>
+                </div>
 
-        <a href="https://unisantanna.br/" target="_blank">
-          <img src="https://hosting.renderforestsites.com/21347132/1025464/media/323ca3b2cebb5a3bd6ed13d4ca360029.png" class="w-20 min-h-[4rem] object-contain flex items-center justify-center" alt="UniSantAnna" />
-        </a>
-      </div>
+                <div class="flex-shrink-0">
+                    <a href="https://unisantanna.br/" target="_blank">
+                        <img src="https://hosting.renderforestsites.com/21347132/1025464/media/323ca3b2cebb5a3bd6ed13d4ca360029.png" class="w-20 h-16 object-contain hover:scale-110 transition-transform" alt="UniSantAnna" />
+                    </a>
+                </div>
+
+                <div class="flex-shrink-0">
+                  <a href="https://drive.google.com/file/d/1goUzcEoHELzrb6155Adw-kuB5jeenX0O/view?usp=sharing" target="_blank">
+                      <img src="assets/cert1.png" class="w-18 h-14 object-contain hover:scale-110 transition-transform" alt="Diploma Psicologia" />
+                  </a>
+                </div>
+
+                <div class="flex-shrink-0">
+                  <a href="https://drive.google.com/file/d/1I0uqmorUXrhuyxAqTKDv_pSqANEZ5nWc/view?usp=sharing" target="_blank">
+                      <img src="assets/cert2.png" class="w-18 h-14 object-contain hover:scale-110 transition-transform" alt="Certificado Product-Led Growth" />
+                  </a>
+                </div>
+
+                <div class="flex-shrink-0">
+                  <a href="https://drive.google.com/file/d/19nutThkjmuK02lNiJ3fFfD4xhaypkCft/view?usp=sharing" target="_blank">
+                      <img src="assets/cert3.png" class="w-18 h-14 object-contain hover:scale-110 transition-transform" alt="Certificado Python" />
+                  </a>
+                </div>
+
+                <div class="flex-shrink-0">
+                  <a href="https://drive.google.com/file/d/1G23SXe0aHI2tc3xaJrQAg3sjAzy27cxv/view?usp=sharing" target="_blank">
+                      <img src="assets/cert4.png" class="w-18 h-14 object-contain hover:scale-110 transition-transform" alt="Certificado Product Analytics" />
+                  </a>
+                </div>
+
+                <div class="flex-shrink-0">
+                  <a href="https://drive.google.com/file/d/1FNTGJSgA5sTf2zMQa72826PZAr2WlCxJ/view?usp=sharing" target="_blank">
+                      <img src="assets/cert5.png" class="w-18 h-14 object-contain hover:scale-110 transition-transform" alt="Certificado Spring Boot" />
+                  </a>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Botão próximo -->
+        <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
     </div>
-  </section>
+    
+    <!-- Indicadores (opcional) -->
+    <div id="indicators" class="flex justify-center mt-6 gap-2"></div>
+</section>
 
   <!-- Posts do Dev.to -->
   <section class="py-16 bg-white text-center">
