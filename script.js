@@ -159,3 +159,12 @@ function showModal(title, message) {
   
   fetchDevToPosts();
   
+  
+  function openCvModal(){ document.getElementById('cvModal').classList.remove('hidden'); }
+  function closeCvModal(){ document.getElementById('cvModal').classList.add('hidden'); }
+  // fecha ao clicar fora
+  document.addEventListener('click', (e)=>{
+    const modal = document.getElementById('cvModal');
+    if(!modal.classList.contains('hidden') && e.target === modal){ closeCvModal(); }
+  });
+  
