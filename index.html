@@ -109,94 +109,130 @@
     <!-- Projetos em andamento -->
     <section class="py-16 bg-white text-center">
       <h2 class="text-3xl font-bold mb-10">Projetos em Andamento</h2>
-      <div class="max-w-md mx-auto bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
-        <h3 class="font-semibold text-xl mb-2" title="Paused">BeeWork ⏸️</h3>
-        <p class="text-sm text-gray-600 mb-4">Aplicativo de Serviços Integrado com Dashboard, Dual-Mode (Consumer & Provider) e Login Firebase.</p>
-        <!-- Barra de progresso -->
-        <div class="w-full bg-gray-300 rounded-full h-4">
-          <div class="bg-purple-600 h-4 rounded-full" style="width: 96%;"></div>
-        </div>
-        <p class="text-sm mt-2 text-gray-700">96% concluído</p>
-        <!-- Linguagens (escondido até clicar) -->
-        <div class="mt-4 hidden languages">
-          <h4 class="font-semibold mb-1 text-sm">Languages - App</h4>
-          <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
-            <div class="bg-teal-500 h-2" style="width: 99.3%"></div>
-            <div class="bg-yellow-400 h-2" style="width: 0.2%"></div>
-            <div class="bg-indigo-400 h-2" style="width: 0.2%"></div>
-            <div class="bg-pink-500 h-2" style="width: 0.1%"></div>
-            <div class="bg-red-400 h-2" style="width: 0.1%"></div>
-            <div class="bg-orange-400 h-2" style="width: 0.1%"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 max-w-6xl mx-auto">
+        <!-- Card: BeeWork -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
+          <h3 class="font-semibold text-xl mb-2" title="Paused">BeeWork ⏸️</h3>
+          <p class="text-sm text-gray-600 mb-4">Aplicativo de Serviços Integrado com Dashboard, Dual-Mode (Consumer & Provider) e Login Firebase.</p>
+          <div class="w-full bg-gray-300 rounded-full h-4">
+            <div class="bg-purple-600 h-4 rounded-full" style="width: 96%;"></div>
           </div>
-          <ul class="text-xs mt-2 text-left space-y-1">
-            <li>
-              <span class="inline-block w-3 h-3 rounded-full bg-teal-500 mr-2"></span>
-              <strong>Dart</strong> 99.3%
-            </li>
-            <li>
-              <span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>
-              <strong>Java</strong> 0.2%
-            </li>
-            <li>
-              <span class="inline-block w-3 h-3 rounded-full bg-indigo-400 mr-2"></span>
-              <strong>Objective-C</strong> 0.2%
-            </li>
-            <li>
-              <span class="inline-block w-3 h-3 rounded-full bg-pink-500 mr-2"></span>
-              <strong>Swift</strong> 0.1%
-            </li>
-            <li>
-              <span class="inline-block w-3 h-3 rounded-full bg-red-400 mr-2"></span>
-              <strong>Ruby</strong> 0.1%
-            </li>
-            <li>
-              <span class="inline-block w-3 h-3 rounded-full bg-orange-400 mr-2"></span>
-              <strong>HTML</strong> 0.1%
-            </li>
-          </ul>
-          <!-- Languages — Painel/Dashboard -->
-          <div class="mt-4">
+          <p class="text-sm mt-2 text-gray-700">96% concluído</p>
+          <div class="mt-4 hidden languages">
+            <h4 class="font-semibold mb-1 text-sm">Languages - App</h4>
+            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+              <div class="bg-teal-500 h-2" style="width: 99.3%"></div>
+              <div class="bg-yellow-400 h-2" style="width: 0.2%"></div>
+              <div class="bg-indigo-400 h-2" style="width: 0.2%"></div>
+              <div class="bg-pink-500 h-2" style="width: 0.1%"></div>
+              <div class="bg-red-400 h-2" style="width: 0.1%"></div>
+              <div class="bg-orange-400 h-2" style="width: 0.1%"></div>
+            </div>
+            <ul class="text-xs mt-2 text-left space-y-1">
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-teal-500 mr-2"></span>
+                <strong>Dart</strong> 99.3%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>
+                <strong>Java</strong> 0.2%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-indigo-400 mr-2"></span>
+                <strong>Objective-C</strong> 0.2%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-pink-500 mr-2"></span>
+                <strong>Swift</strong> 0.1%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-red-400 mr-2"></span>
+                <strong>Ruby</strong> 0.1%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-orange-400 mr-2"></span>
+                <strong>HTML</strong> 0.1%
+              </li>
+            </ul>
+            <div class="mt-4">
+              <h4 class="font-semibold mb-1 text-sm">Languages — Painel</h4>
+              <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+                <div class="bg-indigo-600 h-2" style="width: 81.6%"></div>
+                <div class="bg-red-500 h-2" style="width: 15.9%"></div>
+                <div class="bg-emerald-500 h-2" style="width: 2.0%"></div>
+                <div class="bg-pink-500 h-2" style="width: 0.4%"></div>
+                <div class="bg-lime-500 h-2" style="width: 0.1%"></div>
+                <div class="bg-yellow-400 h-2" style="width: 0.0%"></div>
+              </div>
+              <ul class="text-xs mt-2 text-left space-y-1">
+                <li>
+                  <span class="inline-block w-3 h-3 rounded-full bg-indigo-600 mr-2"></span>
+                  <strong>PHP</strong> 81.6%
+                </li>
+                <li>
+                  <span class="inline-block w-3 h-3 rounded-full bg-red-500 mr-2"></span>
+                  <strong>Blade</strong> 15.9%
+                </li>
+                <li>
+                  <span class="inline-block w-3 h-3 rounded-full bg-emerald-500 mr-2"></span>
+                  <strong>Vue</strong> 2.0%
+                </li>
+                <li>
+                  <span class="inline-block w-3 h-3 rounded-full bg-pink-500 mr-2"></span>
+                  <strong>Sass</strong> 0.4%
+                </li>
+                <li>
+                  <span class="inline-block w-3 h-3 rounded-full bg-lime-500 mr-2"></span>
+                  <strong>Shell</strong> 0.1%
+                </li>
+                <li>
+                  <span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>
+                  <strong>JavaScript</strong> 0.0%
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Card: AdiraquiCRM -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
+          <h3 class="font-semibold text-xl mb-2" title="In progress">AdiraquiCRM 🚧</h3>
+          <p class="text-sm text-gray-600 mb-4"> CRM customizado (Laravel/Bagisto/Webkul) com gestão de usuários, grupos, permissões e reports. </p>
+          <div class="w-full bg-gray-300 rounded-full h-4">
+            <div id="adira-progress-bar" class="bg-indigo-600 h-4 rounded-full" style="width: 0%;"></div>
+          </div>
+          <p id="adira-progress-text" class="text-sm mt-2 text-gray-700">Calculando...</p>
+          <div class="mt-4 hidden languages">
             <h4 class="font-semibold mb-1 text-sm">Languages — Painel</h4>
             <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
-              <div class="bg-indigo-600 h-2" style="width: 81.6%"></div>
-              <!-- PHP -->
-              <div class="bg-red-500 h-2" style="width: 15.9%"></div>
-              <!-- Blade -->
-              <div class="bg-emerald-500 h-2" style="width: 2.0%"></div>
-              <!-- Vue -->
-              <div class="bg-pink-500 h-2" style="width: 0.4%"></div>
-              <!-- Sass -->
-              <div class="bg-lime-500 h-2" style="width: 0.1%"></div>
-              <!-- Shell -->
-              <div class="bg-yellow-400 h-2" style="width: 0.0%"></div>
-              <!-- JavaScript -->
+              <div class="bg-indigo-600 h-2" style="width: 48.8%"></div>
+              <div class="bg-red-500 h-2" style="width: 48.4%"></div>
+              <div class="bg-cyan-400 h-2" style="width: 1.3%"></div>
+              <div class="bg-gray-400 h-2" style="width: 1.5%"></div>
             </div>
             <ul class="text-xs mt-2 text-left space-y-1">
               <li>
                 <span class="inline-block w-3 h-3 rounded-full bg-indigo-600 mr-2"></span>
-                <strong>PHP</strong> 81.6%
+                <strong>PHP</strong> 48.8%
               </li>
               <li>
                 <span class="inline-block w-3 h-3 rounded-full bg-red-500 mr-2"></span>
-                <strong>Blade</strong> 15.9%
+                <strong>Blade</strong> 48.4%
               </li>
               <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-emerald-500 mr-2"></span>
-                <strong>Vue</strong> 2.0%
+                <span class="inline-block w-3 h-3 rounded-full bg-cyan-400 mr-2"></span>
+                <strong>TypeScript</strong> 1.3%
               </li>
               <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-pink-500 mr-2"></span>
-                <strong>Sass</strong> 0.4%
-              </li>
-              <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-lime-500 mr-2"></span>
-                <strong>Shell</strong> 0.1%
-              </li>
-              <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>
-                <strong>JavaScript</strong> 0.0%
+                <span class="inline-block w-3 h-3 rounded-full bg-gray-400 mr-2"></span>
+                <strong>Other</strong> 1.5%
               </li>
             </ul>
+            <div class="mt-3 text-left">
+              <a href="https://github.com/wanderbatistaf/adiraAquiCRM" target="_blank" class="inline-flex items-center text-sm text-blue-600 hover:underline" title="Abrir no GitHub"> Ver repositório no GitHub <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -406,6 +442,28 @@
       </div>
     </section>
     <script>
+      const adiraStartDate = '2025-10-06';
+      document.addEventListener('DOMContentLoaded', function() {
+        const bar = document.getElementById('adira-progress-bar');
+        const label = document.getElementById('adira-progress-text');
+        if (!bar || !label) return;
+        const mapDays = 10;
+        const fullDays = 42;
+        const start = new Date(adiraStartDate + 'T00:00:00');
+        const today = new Date();
+        const msPerDay = 1000 * 60 * 60 * 24;
+        const elapsedDays = Math.max(0, Math.floor((today - start) / msPerDay));
+        let totalPct = Math.min(100, Math.round((elapsedDays / fullDays) * 100));
+        let statusText = '';
+        if (elapsedDays < mapDays) {
+          const mapPct = Math.round((elapsedDays / mapDays) * 100);
+          statusText = `${totalPct}% concluído · MVP em ${mapDays - elapsedDays} dia(s)`;
+        } else {
+          statusText = `${totalPct}% concluído · MVP entregue`;
+        }
+        bar.style.width = totalPct + '%';
+        label.textContent = statusText;
+      });
       document.addEventListener('DOMContentLoaded', function() {
         // 1. Embaralhar os itens do carrossel
         const track = document.getElementById('carouselTrack');
