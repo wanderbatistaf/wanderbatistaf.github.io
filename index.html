@@ -109,7 +109,7 @@
     <!-- Projetos em andamento -->
     <section class="py-16 bg-white text-center">
       <h2 class="text-3xl font-bold mb-10">Projetos em Andamento</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 max-w-6xl mx-auto items-start">
         <!-- Card: BeeWork -->
         <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
           <h3 class="font-semibold text-xl mb-2" title="Paused">BeeWork ⏸️</h3>
@@ -193,38 +193,84 @@
             </div>
           </div>
         </div>
-        <!-- Card: AdiraquiCRM -->
+        <!-- Card: CodeCraft IDE -->
         <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
-          <h3 class="font-semibold text-xl mb-2" title="In progress">AdiraquiCRM 🚧</h3>
-          <p class="text-sm text-gray-600 mb-4"> CRM customizado (Laravel/Bagisto/Webkul) com gestão de usuários, grupos, permissões e reports. </p>
+          <h3 class="font-semibold text-xl mb-2" title="In progress">CodeCraft IDE</h3>
+          <p class="text-sm text-gray-600 mb-4">IDE em desenvolvimento (on course) com foco em experiência para programação.</p>
           <div class="w-full bg-gray-300 rounded-full h-4">
-            <div id="adira-progress-bar" class="bg-indigo-600 h-4 rounded-full" style="width: 0%;"></div>
+            <div id="codecraft-progress-bar" class="bg-indigo-600 h-4 rounded-full" style="width: 51%;"></div>
           </div>
-          <p id="adira-progress-text" class="text-sm mt-2 text-gray-700">Calculando...</p>
+          <p id="codecraft-progress-text" class="text-sm mt-2 text-gray-700">Calculando progresso...</p>
           <div class="mt-4 hidden languages">
             <h4 class="font-semibold mb-1 text-sm">Languages — Painel</h4>
             <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
-              <div class="bg-indigo-600 h-2" style="width: 48.8%"></div>
-              <div class="bg-red-500 h-2" style="width: 48.4%"></div>
-              <div class="bg-cyan-400 h-2" style="width: 1.3%"></div>
-              <div class="bg-gray-400 h-2" style="width: 1.5%"></div>
+              <div class="bg-blue-600 h-2" style="width: 64.7%"></div>
+              <div class="bg-cyan-400 h-2" style="width: 31.1%"></div>
+              <div class="bg-indigo-600 h-2" style="width: 2.1%"></div>
+              <div class="bg-yellow-400 h-2" style="width: 0.7%"></div>
+              <div class="bg-lime-500 h-2" style="width: 0.6%"></div>
+              <div class="bg-purple-500 h-2" style="width: 0.3%"></div>
+              <div class="bg-gray-400 h-2" style="width: 0.5%"></div>
             </div>
             <ul class="text-xs mt-2 text-left space-y-1">
               <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-indigo-600 mr-2"></span>
-                <strong>PHP</strong> 48.8%
-              </li>
-              <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-red-500 mr-2"></span>
-                <strong>Blade</strong> 48.4%
+                <span class="inline-block w-3 h-3 rounded-full bg-blue-600 mr-2"></span>
+                <strong>Python</strong> 64.7%
               </li>
               <li>
                 <span class="inline-block w-3 h-3 rounded-full bg-cyan-400 mr-2"></span>
-                <strong>TypeScript</strong> 1.3%
+                <strong>TypeScript</strong> 31.1%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-indigo-600 mr-2"></span>
+                <strong>Genero 4gl</strong> 2.1%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-yellow-400 mr-2"></span>
+                <strong>COBOL</strong> 0.7%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-lime-500 mr-2"></span>
+                <strong>Shell</strong> 0.6%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-purple-500 mr-2"></span>
+                <strong>CSS</strong> 0.3%
               </li>
               <li>
                 <span class="inline-block w-3 h-3 rounded-full bg-gray-400 mr-2"></span>
-                <strong>Other</strong> 1.5%
+                <strong>Other</strong> 0.5%
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card: Nômina -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
+          <h3 class="font-semibold text-xl mb-2" title="In progress">Nômina</h3>
+          <p class="text-sm text-gray-600 mb-4">CRM baseado em Node.js e Next.js, com simulador de salários e outros recursos para uso interno como framework.</p>
+          <div class="w-full bg-gray-300 rounded-full h-4">
+            <div class="bg-blue-400 h-4 rounded-full" style="width: 30%;"></div>
+          </div>
+          <p class="text-sm mt-2 text-gray-700">30% concluído</p>
+          <div class="mt-4 hidden languages">
+            <h4 class="font-semibold mb-1 text-sm">Languages — Painel</h4>
+            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+              <div class="bg-blue-400 h-2" style="width: 97.9%"></div>
+              <div class="bg-purple-500 h-2" style="width: 1.3%"></div>
+              <div class="bg-gray-400 h-2" style="width: 0.8%"></div>
+            </div>
+            <ul class="text-xs mt-2 text-left space-y-1">
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+                <strong>TypeScript</strong> 97.9%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-purple-500 mr-2"></span>
+                <strong>CSS</strong> 1.3%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-gray-400 mr-2"></span>
+                <strong>Other</strong> 0.8%
               </li>
             </ul>
           </div>
@@ -234,7 +280,7 @@
     <!-- Projetos -->
     <section class="py-16 text-center">
       <h2 class="text-3xl font-bold mb-10">Projetos</h2>
-      <div id="projetos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto">
+      <div id="projetos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto items-start">
         <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)" data-repo="wanderbatistaf/amundsen-informix-ingest">
           <h3 class="font-bold text-xl mb-2">Amundsen Informix Ingest</h3>
           <p class="text-sm text-gray-600">Pipeline de Ingestão de Metadados do Informix no Amundsen usando wbjdbc e databuilder.</p>
@@ -339,6 +385,37 @@
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
+          <h3 class="font-bold text-xl mb-2">AdiraquiCRM</h3>
+          <p class="text-sm text-gray-600">CRM customizado (Laravel/Bagisto/Webkul) com gestão de usuários, grupos, permissões e reports.</p>
+          <div class="mt-4 hidden languages">
+            <h4 class="font-semibold mb-1 text-sm">Languages — Painel</h4>
+            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+              <div class="bg-indigo-600 h-2" style="width: 48.8%"></div>
+              <div class="bg-red-500 h-2" style="width: 48.4%"></div>
+              <div class="bg-cyan-400 h-2" style="width: 1.3%"></div>
+              <div class="bg-gray-400 h-2" style="width: 1.5%"></div>
+            </div>
+            <ul class="text-xs mt-2 text-left space-y-1">
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-indigo-600 mr-2"></span>
+                <strong>PHP</strong> 48.8%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-red-500 mr-2"></span>
+                <strong>Blade</strong> 48.4%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-cyan-400 mr-2"></span>
+                <strong>TypeScript</strong> 1.3%
+              </li>
+              <li>
+                <span class="inline-block w-3 h-3 rounded-full bg-gray-400 mr-2"></span>
+                <strong>Other</strong> 1.5%
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer transition hover:shadow-lg" onclick="toggleLanguages(this)">
           <h3 class="font-bold text-xl mb-2">TibetOnline</h3>
           <p class="text-sm text-gray-600">App Flutter de Loja Online. (iOS e Android)</p>
           <div class="mt-4 hidden languages">
@@ -436,27 +513,22 @@
       </div>
     </section>
     <script>
-      const adiraStartDate = '2025-10-06';
+      const codeCraftMvpReleaseAtUtc = '2026-02-12T16:00:00Z';
       document.addEventListener('DOMContentLoaded', function() {
-        const bar = document.getElementById('adira-progress-bar');
-        const label = document.getElementById('adira-progress-text');
+        const bar = document.getElementById('codecraft-progress-bar');
+        const label = document.getElementById('codecraft-progress-text');
         if (!bar || !label) return;
-        const mapDays = 10;
-        const fullDays = 42;
-        const start = new Date(adiraStartDate + 'T00:00:00');
-        const today = new Date();
-        const msPerDay = 1000 * 60 * 60 * 24;
-        const elapsedDays = Math.max(0, Math.floor((today - start) / msPerDay));
-        let totalPct = Math.min(100, Math.round((elapsedDays / fullDays) * 100));
-        let statusText = '';
-        if (elapsedDays < mapDays) {
-          const mapPct = Math.round((elapsedDays / mapDays) * 100);
-          statusText = `${totalPct}% concluído · MVP em ${mapDays - elapsedDays} dia(s)`;
+        const minProgress = 51;
+        const maxProgress = 78;
+        const progress = Math.floor(Math.random() * (maxProgress - minProgress + 1)) + minProgress;
+        bar.style.width = `${progress}%`;
+        const now = new Date();
+        const releaseAt = new Date(codeCraftMvpReleaseAtUtc);
+        if (now >= releaseAt) {
+          label.textContent = `${progress}% concluído · MVP released · debugging/offline setup pendente`;
         } else {
-          statusText = `${totalPct}% concluído · MVP entregue`;
+          label.textContent = `${progress}% concluído · Open MVP release hoje às 16:00 (UTC+0)`;
         }
-        bar.style.width = totalPct + '%';
-        label.textContent = statusText;
       });
       document.addEventListener('DOMContentLoaded', function() {
         // 1. Embaralhar os itens do carrossel
