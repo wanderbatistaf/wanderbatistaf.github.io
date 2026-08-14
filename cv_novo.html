@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Currículo profissional de Wanderson de Freitas Batista — Full Stack Developer, Functional Analyst, Python, Angular, SQL, Azure e Integração de Sistemas."
+  />
+
+  <title>Currículo | Wanderson de Freitas Batista</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.55rem;
+      top: 0.45rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 9999px;
+      background: #111827;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 0 2px #111827;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      html,
+      body {
+        background: #ffffff !important;
+      }
+
+      body {
+        color: #111827 !important;
+        font-size: 10.5pt;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .print-card {
+        box-shadow: none !important;
+        border: 0 !important;
+      }
+
+      .print-break-avoid {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+  <header class="no-print sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a
+        href="index.html"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition hover:text-black"
+      >
+        <span aria-hidden="true">←</span>
+        Voltar ao portfólio
+      </a>
+
+      <div class="flex items-center gap-2">
+        <a
+          href="mailto:wanderfreitasb@gmail.com"
+          class="hidden rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold transition hover:bg-slate-50 sm:inline-flex"
+        >
+          Entrar em contato
+        </a>
+
+        <button
+          type="button"
+          onclick="window.print()"
+          class="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+        >
+          Salvar / Imprimir PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl p-4 sm:p-6 lg:py-10">
+    <article class="print-card overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+      <section class="bg-slate-950 px-6 py-10 text-white sm:px-10 lg:px-12">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+            <img
+              src="https://avatars.githubusercontent.com/u/98125036?v=4"
+              alt="Wanderson de Freitas Batista"
+              class="h-28 w-28 rounded-2xl border-4 border-white/10 object-cover shadow-2xl"
+            />
+
+            <div>
+              <p class="mb-2 text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">
+                Curriculum Vitae
+              </p>
+
+              <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                Wanderson de Freitas Batista
+              </h1>
+
+              <p class="mt-3 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
+                Full Stack Developer & Functional Analyst com atuação em desenvolvimento de sistemas,
+                arquitetura de soluções, integração entre plataformas, automação, APIs, dados,
+                Inteligência Artificial e digitalização de processos.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid gap-2 text-sm text-slate-300 sm:grid-cols-2 lg:grid-cols-1">
+            <a href="mailto:wanderfreitasb@gmail.com" class="transition hover:text-white">
+              wanderfreitasb@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/wanderfreitasb/"
+              target="_blank"
+              rel="noreferrer"
+              class="transition hover:text-white"
+            >
+              linkedin.com/in/wanderfreitasb
+            </a>
+            <a
+              href="https://github.com/wanderbatistaf"
+              target="_blank"
+              rel="noreferrer"
+              class="transition hover:text-white"
+            >
+              github.com/wanderbatistaf
+            </a>
+            <span>Portugal</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid lg:grid-cols-[1fr_2.1fr]">
+        <aside class="border-b border-slate-200 bg-slate-50 px-6 py-8 sm:px-10 lg:border-b-0 lg:border-r lg:px-8">
+          <div class="space-y-10">
+            <section class="print-break-avoid">
+              <h2 class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                Competências principais
+              </h2>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white">Python</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">FastAPI</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Angular</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">React</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Next.js</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Node.js</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">NestJS</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">TypeScript</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">SQL</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">PySpark</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Databricks</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Informix</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">MSSQL</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">PostgreSQL</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">AI / LLM</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Azure</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Airflow</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Docker</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Flutter</span>
+                <span class="rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-slate-200">Firebase</span>
+              </div>
+            </section>
+
+            <section class="print-break-avoid">
+              <h2 class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                Áreas de atuação
+              </h2>
+
+              <ul class="space-y-3 text-sm leading-relaxed text-slate-700">
+                <li>Desenvolvimento Full Stack</li>
+                <li>Arquitetura e integração de sistemas</li>
+                <li>APIs REST e serviços backend</li>
+                <li>Aplicações React, Next.js e Angular</li>
+                <li>IA aplicada, LLMs, RAG e embeddings</li>
+                <li>Orquestração multi-modelo de IA</li>
+                <li>Automação e processamento de dados</li>
+                <li>CI/CD e infraestrutura de aplicações</li>
+                <li>Análise funcional e desenho de soluções</li>
+              </ul>
+            </section>
+
+            <section class="print-break-avoid">
+              <h2 class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                Tecnologias
+              </h2>
+
+              <div class="space-y-4 text-sm">
+                <div>
+                  <h3 class="font-semibold text-slate-900">Backend</h3>
+                  <p class="mt-1 leading-relaxed text-slate-600">
+                    Python, FastAPI, Node.js, NestJS, Java, Go, APIs REST, automações e integrações.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-slate-900">Frontend</h3>
+                  <p class="mt-1 leading-relaxed text-slate-600">
+                    Angular, React, Next.js, TypeScript, JavaScript, HTML5 e CSS.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-slate-900">Dados</h3>
+                  <p class="mt-1 leading-relaxed text-slate-600">
+                    SQL, PySpark, Databricks, Informix, MSSQL e PostgreSQL.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-slate-900">Cloud & DevOps</h3>
+                  <p class="mt-1 leading-relaxed text-slate-600">
+                    Azure, Airflow, Docker, Nginx, GitLab CI/CD e GitHub Actions.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="print-break-avoid">
+              <h2 class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                Inteligência Artificial
+              </h2>
+
+              <div class="space-y-4 text-sm">
+                <div>
+                  <h3 class="font-semibold text-slate-900">AI Engineering</h3>
+                  <p class="mt-1 leading-relaxed text-slate-600">
+                    LLM APIs, RAG, embeddings, aplicações assistidas por IA, orquestração multi-modelo,
+                    execução paralela e mecanismos de consenso entre modelos.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="print-break-avoid">
+              <h2 class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                Formação Acadêmica
+              </h2>
+
+              <div class="space-y-5 text-sm">
+                <div>
+                  <h3 class="font-semibold text-slate-900">MBA em Análise de Dados e Big Data</h3>
+                  <p class="text-slate-600">Faculdade Alphaville · 800h · 2024</p>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-slate-900">Pós-graduação em Gestão em Projetos e Metodologias Ágeis</h3>
+                  <p class="text-slate-600">UNIASP · 2024</p>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-slate-900">Engenharia de Software</h3>
+                  <p class="text-slate-600">FIAP · 2024–2025</p>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-slate-900">Licenciatura em Psicologia</h3>
+                  <p class="text-slate-600">Universidade Vila Velha (UVV) · 2016–2021</p>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-slate-900">Bacharelado em Gestão Financeira</h3>
+                  <p class="text-slate-600">Centro Universitário UniSant’Anna · 2019–2020</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="print-break-avoid">
+              <h2 class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                Idiomas
+              </h2>
+
+              <div class="space-y-2 text-sm text-slate-700">
+                <p><strong class="text-slate-900">Português:</strong> C2 / Nativo</p>
+                <p><strong class="text-slate-900">Inglês:</strong> Compreensão B2 · Escrita B2 · Fala A2/B1</p>
+              </div>
+            </section>
+          </div>
+        </aside>
+
+        <div class="px-6 py-8 sm:px-10 lg:px-12">
+          <section>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-950">
+              Perfil profissional
+            </h2>
+
+            <p class="mt-4 leading-7 text-slate-700">Profissional de tecnologia com experiência em desenvolvimento Full Stack, análise funcional, arquitetura de soluções, automação, dados e Inteligência Artificial. Atuação em ambientes corporativos e industriais, construindo soluções que conectam aplicações, bancos de dados, APIs, plataformas analíticas, sistemas legados e serviços baseados em LLMs. Experiência com Python, FastAPI, Angular, React, Next.js, Node.js, TypeScript, SQL e ecossistemas de dados. Formação multidisciplinar em Big Data, Engenharia de Software, Gestão de Projetos, Gestão Financeira e Psicologia, combinando visão técnica, analítica e de negócio.</p>
+          </section>
+
+          <section class="mt-10">
+            <div class="flex items-end justify-between gap-4">
+              <h2 class="text-2xl font-bold tracking-tight text-slate-950">
+                Experiência profissional
+              </h2>
+            </div>
+
+            <div class="ml-3 mt-7 border-l-2 border-slate-200 pl-6">
+              <article class="timeline-item print-break-avoid relative pb-9">
+                <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-950">
+                      The Navigator Company
+                    </h3>
+                    <p class="font-medium text-slate-700">
+                      Functional Analyst
+                    </p>
+                  </div>
+
+                  <span class="whitespace-nowrap text-sm font-semibold text-slate-500">
+                    2024 — Atual
+                  </span>
+                </div>
+
+                <p class="mt-3 leading-7 text-slate-700">
+                  Atuação em projetos de desenvolvimento e integração de sistemas em ambiente
+                  industrial, envolvendo PPMS, SAP, Digital Twin, aplicações internas, automações e
+                  tratamento de dados.
+                </p>
+
+                <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700">
+                  <li>
+                    Desenvolvimento de aplicações e APIs utilizando Python, FastAPI, Angular,
+                    React, Next.js, Node.js e TypeScript.
+                  </li>
+                  <li>
+                    Integrações entre sistemas corporativos, bases Informix/MSSQL e plataformas de
+                    dados.
+                  </li>
+                  <li>
+                    Automação de processos com Python, Airflow, Shell e rotinas de processamento.
+                  </li>
+                  <li>
+                    Apoio à evolução de arquitetura, CI/CD, segurança, autenticação e gestão de
+                    permissões.
+                  </li>
+                  <li>
+                    Análise funcional e levantamento de requisitos junto às áreas de negócio.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="timeline-item print-break-avoid relative pb-9">
+                <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-950">
+                      Freelancer
+                    </h3>
+                    <p class="font-medium text-slate-700">
+                      Desenvolvedor Full Stack
+                    </p>
+                  </div>
+
+                  <span class="whitespace-nowrap text-sm font-semibold text-slate-500">
+                    2023 — 2024
+                  </span>
+                </div>
+
+                <p class="mt-3 leading-7 text-slate-700">
+                  Desenvolvimento de soluções web e mobile, APIs, dashboards administrativos,
+                  aplicações comerciais, autenticação e integrações com serviços externos.
+                </p>
+
+                <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700">
+                  <li>Aplicações web com React, Next.js, Node.js e TypeScript.</li>
+                  <li>Aplicações mobile multiplataforma com Flutter.</li>
+                  <li>Backends e integrações utilizando APIs REST, Firebase e bancos relacionais.</li>
+                  <li>Dashboards, sistemas administrativos, e-commerce e produtos SaaS.</li>
+                </ul>
+              </article>
+
+              <article class="timeline-item print-break-avoid relative">
+                <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-950">
+                      PicPay
+                    </h3>
+                    <p class="font-medium text-slate-700">
+                      Data Analyst
+                    </p>
+                  </div>
+
+                  <span class="whitespace-nowrap text-sm font-semibold text-slate-500">
+                    2021 — 2023
+                  </span>
+                </div>
+
+                <p class="mt-3 leading-7 text-slate-700">
+                  Atuação com análise de dados e negócios, automação e geração de insights para
+                  suporte à tomada de decisão e melhoria de processos.
+                </p>
+
+                <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700">
+                  <li>Análises utilizando SQL, Python, PySpark e Databricks.</li>
+                  <li>Construção de indicadores, relatórios e dashboards com ferramentas de BI.</li>
+                  <li>Automação de rotinas e otimização de processos internos.</li>
+                  <li>Suporte analítico a áreas de negócio e liderança.</li>
+                </ul>
+              </article>
+              <article class="timeline-item print-break-avoid relative pt-9">
+                <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-950">Faculdade Novo Milênio</h3>
+                    <p class="font-medium text-slate-700">Assistente Financeiro</p>
+                  </div>
+                  <span class="whitespace-nowrap text-sm font-semibold text-slate-500">2018 — 2020</span>
+                </div>
+
+                <p class="mt-3 leading-7 text-slate-700">
+                  Atuação em contas a pagar, conciliações, fluxo de caixa e relatórios financeiros.
+                  Participação na reestruturação do departamento de bolsas de estudo, com uso de VBA,
+                  Microsoft Office, Athenas e SQL para organização e melhoria de processos.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="mt-10">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-950">
+              Projetos em destaque
+            </h2>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <article class="print-break-avoid rounded-2xl border border-slate-200 p-5">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 class="font-bold text-slate-950">CodeCraft IDE</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">
+                      IDE voltada à modernização da experiência de desenvolvimento, com suporte a
+                      linguagens legadas e modernas.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="print-break-avoid rounded-2xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-950">WBJDBC</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Biblioteca Python para simplificar conexões JDBC e inicialização da JVM,
+                  especialmente em ambientes Informix.
+                </p>
+              </article>
+
+              <article class="print-break-avoid rounded-2xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-950">WBORM</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  ORM leve em Python com introspecção automática para bancos acessíveis via JDBC.
+                </p>
+              </article>
+
+              <article class="print-break-avoid rounded-2xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-950">Amundsen Informix Ingest</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Pipeline para ingestão de metadados do Informix no Amundsen utilizando Python,
+                  WBJDBC e Databuilder.
+                </p>
+              </article>
+
+              <article class="print-break-avoid rounded-2xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-950">VetScan AI</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Plataforma SaaS Full Stack de IA assistida para diagnóstico veterinário por imagem
+                  e geração de laudos, com gestão de exames, animais, tutores, templates, histórico e
+                  recursos de assistência inteligente para padronizar e acelerar o processo de laudo.
+                </p>
+              </article>
+
+              <article class="print-break-avoid rounded-2xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-950">Nômina</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Plataforma de gestão empresarial e recrutamento desenvolvida com Next.js, React,
+                  Node.js e TypeScript, com centralização de candidatos, pipeline visual, simulador de
+                  salários e fluxos administrativos.
+                </p>
+              </article>
+
+              <article class="print-break-avoid rounded-2xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-950">mddOne</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Plataforma SaaS modular orientada a IA para empresas, com arquitetura Full Stack,
+                  backoffice administrativo, APIs, módulos extensíveis e mecanismos de orquestração
+                  multi-modelo, execução paralela e consenso entre modelos de inteligência artificial.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="mt-10 print-break-avoid">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-950">
+              Certificações e desenvolvimento contínuo
+            </h2>
+
+            <p class="mt-4 leading-7 text-slate-700">
+              Formação e certificações complementares em engenharia de software, Microsoft Azure,
+              Databricks, AWS, Python, desenvolvimento backend, analytics e gestão de projetos.
+            </p>
+          </section>
+
+          <section class="mt-10 border-t border-slate-200 pt-7 print-break-avoid">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 class="font-bold text-slate-950">
+                  Portfólio e código
+                </h2>
+                <p class="mt-1 text-sm text-slate-600">
+                  Projetos, artigos e outras informações estão disponíveis no portfólio online.
+                </p>
+              </div>
+
+              <a
+                href="index.html"
+                class="no-print inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+              >
+                Ver portfólio completo
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
