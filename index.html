@@ -22,7 +22,7 @@
         <div class="max-w-xl">
           <h1 class="text-4xl font-bold mb-2">Olá, eu sou <span class="text-yellow-300">Wanderson</span>
           </h1>
-          <p class="text-lg mb-4">Functional Analyst | Eng. Sistemas & Desenvolvimento | Python | Flutter | Azure | SQL | Firebase | WebApps</p>
+          <p class="text-lg mb-4">Functional Analyst | Full Stack Developer | Python | Angular | React | Next.js | Node.js | AI | SQL | Azure</p>
           <div class="flex justify-center gap-4 mb-4">
             <a href="https://www.linkedin.com/in/wanderfreitasb/" target="_blank">
               <img src="https://cdn-icons-png.flaticon.com/512/3488/3488334.png" alt="LinkedIn" style="color: white" class="w-10 h-10 transition-transform transform hover:scale-110 hover:opacity-80 filter brightness-0 invert" />
@@ -36,7 +36,7 @@
           </div>
           <div class="flex justify-center gap-3">
             <a href="mailto:wanderfreitasb@gmail.com" class="bg-white text-purple-600 px-6 py-2 rounded-full hover:bg-purple-100 transition font-semibold"> Vamos conversar </a>
-            <button onclick="openCvModal()" class="bg-transparent border border-white/60 text-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition font-semibold"> Ver CV online </button>
+            <a href="cv.html" class="bg-transparent border border-white/60 text-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition font-semibold"> Ver currículo </a>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
     <section class="py-16 text-center bg-white">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-4">Sobre mim</h2>
-        <p class="text-lg text-gray-700">Sou um Dev Full Stack atuando como Analista Funcional, apaixonado por Desenvolvimento de Sistemas, com Sólida Experiência em Soluções Backend, APIs, Automações e Integração de Sistemas. Com atuação atualmente na Indústria, especificamente no setor de papel e celulose, me destaco na Análise e Construção de Ferramentas que Impulsionam a Produtividade e Conectividade. Tenho forte atuação com Python, SQL, Flutter, Firebase e Microsoft Azure, e venho Colaborando com Iniciativas de Digitalização e Transformação de Processos.</p>
+        <p class="text-lg text-gray-700">Sou um Dev Full Stack atuando como Analista Funcional, com experiência em desenvolvimento de sistemas, arquitetura de soluções, APIs, automações, integração de sistemas, dados e Inteligência Artificial. Atuo em ambiente industrial construindo ferramentas e integrações que aumentam produtividade, rastreabilidade e conectividade entre sistemas. Trabalho com Python, FastAPI, Angular, React, Next.js, Node.js, NestJS, TypeScript, SQL, Databricks, Informix, MSSQL, PostgreSQL, Docker, Airflow, Azure e aplicações assistidas por IA. Minha base anterior em análise de dados e gestão também contribui para uma visão técnica conectada ao negócio.</p>
       </div>
     </section>
     <!-- Tecnologias e Linguagens -->
@@ -75,13 +75,19 @@
           <button onclick="showModal('JavaScript', 'Linguagem de Programação para Interatividade e Lógica no Lado do Cliente.')" class="bg-yellow-400 text-black px-3 py-1 rounded text-sm font-semibold">JavaScript</button>
           <button onclick="showModal('Java', 'Linguagem Orientada a Objetos Amplamente Usada em Aplicações Corporativas.')" class="bg-blue-700 px-3 py-1 rounded text-sm font-semibold">JAVA</button>
           <button onclick="showModal('Angular', 'Framework Front-End Baseado em TypeScript para Construção de SPAs.')" class="bg-red-500 px-3 py-1 rounded text-sm font-semibold">ANGULAR</button>
+          <button onclick="showModal('React', 'Biblioteca JavaScript para Construção de Interfaces Web Componentizadas.')" class="bg-cyan-500 text-black px-3 py-1 rounded text-sm font-semibold">REACT</button>
+          <button onclick="showModal('Next.js', 'Framework React para Aplicações Web Full Stack, SSR, SSG e APIs.')" class="bg-black px-3 py-1 rounded text-sm font-semibold border border-gray-600">NEXT.JS</button>
           <button onclick="showModal('TypeScript', 'Superset do JavaScript que Adiciona Tipagem Estática.')" class="bg-blue-500 px-3 py-1 rounded text-sm font-semibold">TYPESCRIPT</button>
+          <button onclick="showModal('Node.js', 'Runtime JavaScript para Construção de APIs, Serviços Backend e Aplicações Escaláveis.')" class="bg-green-700 px-3 py-1 rounded text-sm font-semibold">NODE.JS</button>
+          <button onclick="showModal('NestJS', 'Framework Backend em Node.js e TypeScript para Aplicações Modulares e Escaláveis.')" class="bg-red-700 px-3 py-1 rounded text-sm font-semibold">NESTJS</button>
           <button onclick="showModal('Python', 'Linguagem Versátil Usada em Automação, Ciência de Dados e Back-end.')" class="bg-slate-600 px-3 py-1 rounded text-sm font-semibold">PYTHON</button>
           <button onclick="showModal('Golang', 'Linguagem de Programação Desenvolvida pelo Google, Conhecida por sua Performance e Concorrência Eficiente.')" class="bg-cyan-700 px-3 py-1 rounded text-sm font-semibold">GOLANG</button>
           <button onclick="showModal('Flutter', 'Framework do Google para Construção de Apps Mobile Nativos com Dart.')" class="bg-blue-600 px-3 py-1 rounded text-sm font-semibold">FLUTTER</button>
           <button onclick="showModal('Dart', 'Linguagem Usada com Flutter para Construção de Interfaces.')" class="bg-blue-400 px-3 py-1 rounded text-sm font-semibold">DART</button>
           <button onclick="showModal('Informix', 'SGBD Robusto Usado Principalmente em Ambientes Industriais.')" class="bg-gray-700 px-3 py-1 rounded text-sm font-semibold">INFORMIX</button>
           <button onclick="showModal('SQL', 'Linguagem Padrão para Consultas e Manipulação de Dados em Bancos Relacionais.')" class="bg-green-600 px-3 py-1 rounded text-sm font-semibold">SQL</button>
+          <button onclick="showModal('PostgreSQL', 'Banco de Dados Relacional Open Source Robusto e Extensível.')" class="bg-blue-800 px-3 py-1 rounded text-sm font-semibold">POSTGRESQL</button>
+          <button onclick="showModal('Inteligência Artificial', 'Aplicações com LLMs, RAG, Embeddings, Orquestração Multi-Modelo e Assistência Inteligente.')" class="bg-violet-700 px-3 py-1 rounded text-sm font-semibold">AI / LLM</button>
         </div>
       </div>
     </section>
@@ -102,7 +108,7 @@
         <div>
           <div class="text-blue-400 text-5xl mb-4">🧠</div>
           <h3 class="font-semibold text-xl mb-2">Análise & Automação</h3>
-          <p>RPA, Extração de Dados, Automações em Python com Cron Jobs e Dashboards Orientados a Resultado.</p>
+          <p>Automações em Python, processamento de dados, integrações, dashboards e soluções assistidas por IA com LLMs, RAG, embeddings e orquestração multi-modelo.</p>
         </div>
       </div>
     </section>
@@ -247,31 +253,54 @@
         <!-- Card: Nômina -->
         <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
           <h3 class="font-semibold text-xl mb-2" title="In progress">Nômina</h3>
-          <p class="text-sm text-gray-600 mb-4">CRM baseado em Node.js e Next.js, com simulador de salários e outros recursos para uso interno como framework.</p>
+          <p class="text-sm text-gray-600 mb-4">Plataforma de gestão empresarial e recrutamento construída com Node.js e Next.js, com simulador de salários, pipeline de candidatos e recursos administrativos integrados.</p>
           <div class="w-full bg-gray-300 rounded-full h-4">
             <div class="bg-blue-400 h-4 rounded-full" style="width: 30%;"></div>
           </div>
           <p class="text-sm mt-2 text-gray-700">30% concluído</p>
           <div class="mt-4 hidden languages">
-            <h4 class="font-semibold mb-1 text-sm">Languages — Painel</h4>
-            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
-              <div class="bg-blue-400 h-2" style="width: 97.9%"></div>
-              <div class="bg-purple-500 h-2" style="width: 1.3%"></div>
-              <div class="bg-gray-400 h-2" style="width: 0.8%"></div>
-            </div>
+            <h4 class="font-semibold mb-1 text-sm">Stack principal</h4>
             <ul class="text-xs mt-2 text-left space-y-1">
-              <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
-                <strong>TypeScript</strong> 97.9%
-              </li>
-              <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-purple-500 mr-2"></span>
-                <strong>CSS</strong> 1.3%
-              </li>
-              <li>
-                <span class="inline-block w-3 h-3 rounded-full bg-gray-400 mr-2"></span>
-                <strong>Other</strong> 0.8%
-              </li>
+              <li><strong>Next.js / React</strong> — aplicação web e interface</li>
+              <li><strong>Node.js / TypeScript</strong> — regras de negócio e serviços</li>
+              <li><strong>PostgreSQL</strong> — persistência de dados</li>
+              <li><strong>Docker</strong> — ambiente e entrega da aplicação</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card: VetScan AI -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
+          <h3 class="font-semibold text-xl mb-2" title="In progress">VetScan AI</h3>
+          <p class="text-sm text-gray-600 mb-4">Plataforma SaaS de IA assistida para diagnóstico veterinário por imagem e geração de laudos, com gestão de exames, animais, tutores, templates e histórico.</p>
+          <div class="w-full bg-gray-300 rounded-full h-4">
+            <div class="bg-emerald-600 h-4 rounded-full" style="width: 40%;"></div>
+          </div>
+          <p class="text-sm mt-2 text-gray-700">Em desenvolvimento</p>
+          <div class="mt-4 hidden languages">
+            <h4 class="font-semibold mb-1 text-sm">Stack principal</h4>
+            <ul class="text-xs mt-2 text-left space-y-1">
+              <li><strong>IA aplicada</strong> — assistência à geração de laudos</li>
+              <li><strong>Web App</strong> — gestão de exames e fluxos veterinários</li>
+              <li><strong>SaaS</strong> — arquitetura preparada para clínicas e múltiplos utilizadores</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card: mddOne -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer transition hover:shadow-lg w-full" onclick="toggleLanguages(this)">
+          <h3 class="font-semibold text-xl mb-2" title="In progress">mddOne</h3>
+          <p class="text-sm text-gray-600 mb-4">Plataforma SaaS modular orientada a IA para empresas, com backoffice, arquitetura extensível e orquestração multi-modelo com execução paralela e consenso entre modelos.</p>
+          <div class="w-full bg-gray-300 rounded-full h-4">
+            <div class="bg-violet-600 h-4 rounded-full" style="width: 55%;"></div>
+          </div>
+          <p class="text-sm mt-2 text-gray-700">Em desenvolvimento</p>
+          <div class="mt-4 hidden languages">
+            <h4 class="font-semibold mb-1 text-sm">Stack / arquitetura</h4>
+            <ul class="text-xs mt-2 text-left space-y-1">
+              <li><strong>IA multi-modelo</strong> — execução paralela e consenso</li>
+              <li><strong>Arquitetura modular</strong> — preparada para evolução por domínios</li>
+              <li><strong>Backoffice</strong> — gestão administrativa da plataforma</li>
             </ul>
           </div>
         </div>
@@ -619,6 +648,49 @@
         });
       });
     </script>
+
+    <!-- Formação Acadêmica -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold">Formação Acadêmica</h2>
+          <p class="mt-3 text-gray-600">Formação multidisciplinar conectando tecnologia, dados, gestão e comportamento.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <article class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wider text-violet-700">MBA</p>
+            <h3 class="mt-2 text-lg font-bold">Análise de Dados e Big Data</h3>
+            <p class="mt-1 text-sm text-gray-600">Faculdade Alphaville · 800h · Concluído em 2024</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wider text-blue-700">Pós-graduação</p>
+            <h3 class="mt-2 text-lg font-bold">Gestão em Projetos e Metodologias Ágeis</h3>
+            <p class="mt-1 text-sm text-gray-600">UNIASP · Concluída em 2024</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600">Engenharia de Software</p>
+            <h3 class="mt-2 text-lg font-bold">Formação em Engenharia de Software</h3>
+            <p class="mt-1 text-sm text-gray-600">FIAP · 2024–2025</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-700">Graduação</p>
+            <h3 class="mt-2 text-lg font-bold">Psicologia</h3>
+            <p class="mt-1 text-sm text-gray-600">Universidade Vila Velha (UVV) · 2016–2021</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 p-6 shadow-sm md:col-span-2">
+            <p class="text-xs font-semibold uppercase tracking-wider text-amber-700">Graduação</p>
+            <h3 class="mt-2 text-lg font-bold">Gestão Financeira</h3>
+            <p class="mt-1 text-sm text-gray-600">Centro Universitário UniSant’Anna · 2019–2020</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Certificações / Selos -->
     <section class="py-16 bg-gray-50 text-center">
       <h2 class="text-3xl font-bold mb-10">Selos e Certificações</h2>
